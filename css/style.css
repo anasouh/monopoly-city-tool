@@ -1,0 +1,253 @@
+@import url('https://fonts.cdnfonts.com/css/kabel-bd');
+@import url(https://db.onlinewebfonts.com/c/ada12d66266e5f4e4ac8f9a8d38b3694?family=Metro+Office+W01+Regular); 
+@import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2');
+
+@font-face {
+    font-family: "Metro Office W01 Regular";
+    src: url("https://db.onlinewebfonts.com/t/ada12d66266e5f4e4ac8f9a8d38b3694.eot");
+    src: url("https://db.onlinewebfonts.com/t/ada12d66266e5f4e4ac8f9a8d38b3694.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/ada12d66266e5f4e4ac8f9a8d38b3694.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/ada12d66266e5f4e4ac8f9a8d38b3694.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/ada12d66266e5f4e4ac8f9a8d38b3694.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/ada12d66266e5f4e4ac8f9a8d38b3694.svg#Metro Office W01 Regular")format("svg");
+}
+
+html, body {
+    font-family: "Metro Office W01 Regular";
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Kabel Bd', sans-serif;
+}
+
+span {
+    text-align: center;
+}
+
+button, select, option {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+@media screen and (max-width: 666px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+.timer {
+    grid-column: 1 / 3;
+    
+}
+
+.container .timer, .container .building, .container .dicing {
+    border: 2px solid #202020;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.timer>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+
+@media screen and (max-width:561px) {
+    .timer>div {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+}
+
+.timer_time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.timer_time span {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.timer_time input {
+    border: 0;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 2px;
+}
+
+.timer_time div {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer_time div input:first-child::after {
+    content: ':';
+    margin-right: 5px;
+}
+
+.timer_time input:focus {
+    outline: 1px solid #52525269;
+}
+
+.timer_time input::placeholder {
+    color: #000;
+}
+
+.timer_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;  
+}
+
+.timer_buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+}
+
+.timer_buttons button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#timer_start {
+    background: url("../img/play.svg") no-repeat center;
+    border: 1px solid #ccc;
+}
+
+#timer_stop {
+    background: url("../img/stop.svg") no-repeat center;
+    border: 1px solid #ccc;
+}
+
+#timer_reset {
+    background: url("../img/refresh.svg") no-repeat center;
+    border: 1px solid #ccc;
+}
+
+#auctionBtn.auctions--active {
+    background-image: url("https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif");
+    /*border: 2px solid #80fc87;*/
+
+}
+
+#auctionBtn {
+    background-color: #f5f5f5;
+    background-image: none;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #f5f5f5;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-image: url("../img/auction.svg");
+    background-size: 20px;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #00000018;
+    transition: all 0.3s ease-in-out;
+}
+
+#auctionBtn:enabled:hover {
+    background-color: #e4e4e4;
+    cursor: pointer;
+}
+
+#auctionBtn:disabled {
+    cursor: not-allowed;
+}
+
+select {
+    width: fit-content;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.building {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.building div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.building button {
+    padding: 0 10px;
+}
+
+.building select, .building button {
+    height: 30px;
+    font-size: 15px;
+}
+
+#quartier {
+    text-align: center;
+}
+
+.dicing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dices_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dicing button  {
+    margin-top: 20px;
+}

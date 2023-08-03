@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Monopoly City</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="timer">
+            <h3>Déroulé de la partie</h3>
+            <div>
+                            <div>
+                <div class="timer_time">
+                    <div>
+                        <input id="timer_hours" value="01"></input>:
+                        <input id="timer_minutes" value="00"></input>:
+                        <input id="timer_seconds" value="00"></input>
+                    </div>
+                    <span style="display: none;">Choisissez la durée de votre partie</span>
+                </div>
+                <div class="timer_buttons">
+                    <button id="timer_start"></button>
+                    <button id="timer_stop"></button>
+                    <button id="timer_reset"></button>
+                </div>
+            </div>
+
+            <div class="auctions">
+                <button id="auctionBtn">Débuter les enchères</button>
+            </div>
+            </div>
+
+        </div>
+
+
+        <div class="building">
+            <h3>Gestion des bâtiments</h3>
+            <div>
+                <select name="Quartier" id="selectStreet">
+                    <option value="bellevue">Bellevue</option>
+                    <option value="lavalliere">Lavallière</option>
+                    <option value="sainte-anne">Sainte-Anne</option>
+                </select>
+                <button id="streetReset">Réinitialiser</button>
+            </div>
+
+            <p id="quartier"></p>
+        </div>
+
+        <div class="dicing">
+            <h3>Lancer de dés</h3>
+            <div class="dices_container">
+                <div class="dice">
+                    <img src="img/dices/dice1.png" id="diceOne">
+                </div>
+                <div class="dice">
+                    <img src="img/dices/dice1.png" id="diceTwo">
+                </div>
+            </div>
+            <span style="display: none;">Vous avez fait un double, avancez et rejouez !"</span>
+            <button id="diceBtn">Lancer les dés</button>
+        </div>
+    </div>
+</body>
+<script src="js/auctions.js"></script>
+<script src="js/building.js"></script>
+<script src="js/dice.js"></script>
+<script src="js/timer.js"></script>
+</html>
