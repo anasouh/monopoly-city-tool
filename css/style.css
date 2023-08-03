@@ -251,3 +251,18 @@ select {
 .dicing button  {
     margin-top: 20px;
 }
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    text-decoration-style: dotted; 
+    color: #636363;
+}
+
+footer a:hover {
+    text-decoration-style: unset;
+    color: #000;
+}
